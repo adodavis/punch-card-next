@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600&display=swap');
+
+/* ====================================================================
+   Base styles - dark mode default
+=====================================================================*/
+
+.scorecards-list-page {
+    padding: 2rem;
+}
+
+.scorecards-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 1rem 0;
+}
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.app-title-container {
+    font-family: 'Bebas Nue', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px black;
+    font-size: 2.5rem;
+    color: #f0f0f0;
+    letter-spacing: 1.5px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 25;
+}
+
+.title-emoji {
+    font-size: 2.5rem;
+    margin: 0 0.4rem;
+    display: inline-block;
+}
+
+@media (max-width: 480px) {
+    .app-title-container {
+        font-size: 1.5rem;
+    }
+
+    .title-emoji {
+        font-size: 1.4rem;
+    }
+
+    .logout-btn img {
+        width: 15px !important;
+        height: 15px !important;
+        margin-top: 7px;
+    }
+
+    .card-names-container {
+       font-size: 10px;
+    }
+
+    .card-rds-container, .card-date-container, .card-result-container {
+        font-size: 13px;
+    }
+
+    .championship-icon {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+h1, h2 {
+    font-family: 'Bebas Nue', sans-serif;
+    letter-spacing: 1px;
+}
+
+button, select, input, textarea {
+    font-family: 'Inter', sans-serif;
+}
+
+
+.logout-btn {
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    position: absolute;
+    right: 0.1rem;
+}
+
+.logout-btn img {
+    width: 30px;
+    height: 30px;
+    filter: invert(0.85);
+}
+
+.logout-btn:hover img {
+    opacity: 0.7;
+    transform: scale(1.05);
+    transition: 0.15s ease;
+}
+
+.logout-btn:active img {
+    transform: scale(0.92);
+    opacity: 0.5;
+}
+
+.add-fight-btn {
+    all: unset;
+    background-color: #007bff;
+    border: none;
+    cursor: pointer;
+    font-size: 36px;
+    font-weight: 500;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 45px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    line-height: 60px;
+    padding: 0;
+    transition: transform 0.2s ease, box-shadow;
+    color: white;
+}
+
+.add-fight-btn:hover {
+    opacity: 1;
+    transform: scale(1.08);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+.add-fight-btn span {
+    display: inline-block;
+    transform: translateY(-2px);
+}
+
+.search-container {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.search-btn {
+    background-color: transparent;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.search-btn img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.search-btn:hover img {
+    transform: scale(1.08);
+}
+
+.search-input {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    font-size: 14px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.scorecards-list {
+    margin-top: 2rem;
+}
+
+.scorecard-item {
+    position: relative;
+    margin-bottom: 1rem;
+    padding: 12px; 
+    border: 1px solid #444;
+    border-radius: 6px;
+    background-color: gray;
+    border: 2px  outset black;
+}
+
+.scorecard-item:hover {
+    opacity: 0.7;
+}
+
+.scorecard-item a {
+    text-decoration: none;
+    color: inherit
+}
+
+.scorecard-item h2,
+.scorecard-item p {
+    margin: 2px 0;
+    padding: 0;
+}
+
+.card-names-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+    
+   white-space: nowrap;
+   overflow: inherit;
+}
+
+.card-names-container p {
+    white-space: normal;
+    font-weight: 600;
+    text-align: center;
+}
+
+.championship-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 4px;
+    width: 16px;
+    height: 16px;
+    flex-shrink: 0;
+}
+
+.card-names-container, .card-rds-container, .card-date-container, .card-result-container {
+    text-align: center;
+    width: 100%;
+}
+
+.card-names-container p, .card-rds-container p, .card-date-container p, .card-result-container p {
+    margin: 5px 0;
+    /* color: #fff; */
+    text-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.5);
+}
+
+.delete-btn-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: none;
+    background-color: transparent;
+}
+
+.delete-btn-container button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.delete-btn-container:hover button {
+    font-size: 20px;
+}
+
+/* ====================================================================
+   Base styles - Light mode
+=====================================================================*/
+@media (prefers-color-scheme: light) {
+    /*containers in list of scorecards (main page) */
+    body {
+    background-color: white;
+    color: #1a1a1a;
+  }
+
+  .app-title-container {
+    color: #111;
+    text-shadow:
+        0px 1px 1px rgba(0,0,0,0.35),
+        0px 2px 2px rgba(0,0,0,0.25);
+  }
+
+  h1 {
+    color: #111;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .scorecard-item {
+    background-color: #d6d6d6;
+    color: #1a1a1a;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .logout-btn img {
+        filter: invert(0); /* original black icon on white background */
+        width: 20px;
+        height: 20px;
+    }
+
+    @media (max-width: 480px) {
+        .logout-btn img {
+            width: 15px !important;
+            height: 15px !important;
+        }
+    }
+}

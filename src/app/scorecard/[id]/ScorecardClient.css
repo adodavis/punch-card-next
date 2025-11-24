@@ -1,0 +1,174 @@
+.fighter-title-container {
+    padding: 1rem;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 480px) {
+    .fighter-title-container {
+        font-size: 10px;
+    }
+}
+
+.round-container {
+    border: 1px solid #555;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+}
+
+.total-score-container {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.total-score-container, .winner-display-container {
+    text-align: center;
+}
+
+.end-fight-btn {
+    margin-top: 10px;
+}
+
+.end-fight-btn button:hover {
+    background-color: red;
+}
+
+.winner-popup-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1000;
+}
+
+.winner-form {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 450px;
+
+    background-color: #1e1e1e;
+    padding: 24px;
+    border-radius: 12px;
+    color: white;
+    z-index: 9999;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+
+    height: auto;
+    max-height: 85%;
+    overflow-y: auto;
+}
+
+.winner-form h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+.winner-section {
+    margin-bottom: 15px;
+}
+
+@supports (height: 100dvh) {
+    .winner-form {
+        top: calc(50dvh);
+    }
+}
+
+.radio-option {
+    display: inline-block;
+    padding: 6px 12px;
+    margin: 4px;
+    cursor: pointer;
+    border: 1px solid #444;
+    background-color: #2c2c2c;
+    transition: 0.15s ease;
+    user-select: none;
+}
+
+.radio-option input {
+    display: none;
+}
+
+.radio-option.selected {
+    background-color: #2b67ff;
+    border-color: #2b67ff;
+}
+
+.radio-option:hover {
+    transform: scale(1.04);
+    opacity: 0.9;
+}
+
+.winner-confirm-btn {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+    padding: 10px 0;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: 0.15s ease;
+}
+
+.winner-confirm-btn:hover {
+    background-color: #2558d8;
+}
+
+.winner-confirm-btn:active {
+    transform: scale(0.96);
+}
+
+.winner-close-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 26px;
+    height: 26px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    transition: 0.15s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.winner-close-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.winner-close-btn:active {
+    transform: scale(0.92);
+}
+
+@media (prefers-color-scheme: light) {
+     .winner-form {
+        filter: invert(1);
+    }
+
+    .end-fight-btn button {
+        filter: invert(1);
+    }
+
+       .winner-confirm-btn {
+        background-color: inherit;
+    }
+
+    .end-fight-btn button:hover {
+        filter: invert(0);
+        background-color: red;
+    } 
+
+    .winner-close-btn {
+        background-color: #2c2c2c;
+    }
+}
