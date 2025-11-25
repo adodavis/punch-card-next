@@ -2,8 +2,6 @@ import Link from 'next/link';
 import { prisma } from '@/lib/prisma';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/app/api/auth/[...nextauth]/route';
-import ResultDisplay from './ResultDisplay';
-import DeleteButton from './DeleteButton';
 import ScorecardsListClient from './ScorecardsListClient';
 import './page.css';
 
@@ -53,9 +51,8 @@ export default async function ScorecardsPage() {
             </Link>
 
             <div className="scorecards-list">
-                {fights.length === 0 && <p>No scorecards yet.</p>}
-
                 <ScorecardsListClient fights={fightsWithDate} />
+                {fights.length === 0 && <p style={{ textAlign: "center", width: "100%" }}>No scorecards yet.</p>}
             </div>
         </div>
     );

@@ -33,7 +33,7 @@ export default function ScorecardsListClient ({ fights }) {
             )}
 
             <div className="scorecards-list">
-                {filtered.length === 0 && <p style={{ textAlign: "center"}}>No matches found.</p>}
+                {filtered.length === 0 && fights.length >  0 && <p style={{ textAlign: "center"}}>No matches found.</p>}
 
                 {filtered.map(fight=> (
                     <div key={fight.id} className="scorecard-item">

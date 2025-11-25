@@ -2,8 +2,8 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { NextResponse } from 'next/server';
 import Link from 'next/link';
+import './page.css';
 
 export default function SignupPage() {
     const router = useRouter();
@@ -94,7 +94,7 @@ export default function SignupPage() {
     }
 
     return (
-        <div style={{ padding: "2rem", maxWidth: "320px"}}>
+        <div className="sign-up-page" style={{ padding: "2rem", maxWidth: "320px"}}>
             <form onSubmit={handleSubmit} style={{ display: "grid", gap: "1rem" }}>
                 <h1>Create Account</h1>
                 <input

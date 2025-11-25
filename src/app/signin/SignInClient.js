@@ -4,6 +4,7 @@ import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import './SignInClient.css';
 
 export default function SignInClient() {
     const router = useRouter();
@@ -28,7 +29,7 @@ export default function SignInClient() {
     }
 
     return (
-        <div style={{ padding: "2rem", maxWidth: 320 }}>
+        <div className="sign-in-form-page" style={{ padding: "2rem", maxWidth: 320 }}>
             <h1>Sign In</h1>
 
             <form onSubmit={handleSubmit} style={{ display: "grid", gap: "1rem" }}>
