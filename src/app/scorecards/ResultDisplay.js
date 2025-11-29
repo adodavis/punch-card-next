@@ -7,9 +7,15 @@ export default function ResultDisplay({ fight }) {
     );
     
     let resultText  = "";
+    let givenLastName = "";
+
+    // Handles fighter names with more or less than first and last names
+    if (fight.winner) {
+        givenLastName = fight.winner.split(" ").length - 1;
+    }
 
     if (["KO", "TKO", "RTD", "DQ"].includes(fight.outcome)) {
-        let winnerName = fight.winner.split(" ")[1];
+        let winnerName = fight.winner.split(" ")[givenLastName];
         resultText = `${winnerName} ${fight.outcome} ${fight.rounds.filter(round => round.fighterA > 0 && round.fighterB > 0).length + 1}`;
     } else if (allRoundScored) {
         const { fighterATotal, fighterBTotal } = calculateTotalSScore(rounds);
