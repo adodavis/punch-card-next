@@ -9,7 +9,11 @@ export default async function ScorecardsPage() {
     const session = await getServerSession(authOptions);
     if (!session) {
         return (
-            <div style={{ padding: "2rem" }}>
+            <div style={{ padding: "2rem", textAlign: "center", placeItems: "center" }}>
+                <div className="app-title-header">
+                    <img src="/icons/title-header.png" alt="Punch Card Header" />
+                </div>
+                
                 <h1>You must be logged in.</h1>
                 <Link href="/signin">Sign In</Link>
             </div>
@@ -30,11 +34,10 @@ export default async function ScorecardsPage() {
     return(
         <div className="scorecards-list-page">
             <div className="scorecards-header">
-                <div className="title-wrapper">
-                    <span className="title-emoji">🥊</span>
-                    <h1 className="app-title-container">Punch Card</h1>
-                    <span className="title-emoji">🥊</span>
+                <div className="app-title-header">
+                    <img src="/icons/title-header.png" alt="Punch Card Header" />
                 </div>
+                
                 
                 <form action="/api/auth/signout">
                     <button type="submit" className="logout-btn">

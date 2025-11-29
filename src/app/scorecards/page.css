@@ -5,7 +5,7 @@
 =====================================================================*/
 
 .scorecards-list-page {
-    padding: 2rem;
+    padding: 0 2rem;
 }
 
 .scorecards-header {
@@ -13,7 +13,8 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 1rem 0;
+    padding: 0.2rem 0 0.2rem 0;
+    padding-bottom: 0;
 }
 
 .title-wrapper {
@@ -22,17 +23,15 @@
     gap: 0.4rem;
 }
 
-.app-title-container {
-    font-family: 'Bebas Nue', sans-serif;
-    text-transform: uppercase;
-    text-shadow: 1px 1px 2px black;
-    font-size: 2.5rem;
-    color: #f0f0f0;
-    letter-spacing: 1.5px;
+.app-title-header {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+}
 
-    white-space: nowrap;
-    overflow: hidden;
-    margin-bottom: 25;
+.app-title-header img {
+    width: 280px;
+    height: auto;
 }
 
 .title-emoji {
@@ -42,10 +41,11 @@
 }
 
 @media (max-width: 480px) {
-    .app-title-container {
-        font-size: 1.5rem;
+    .app-title-header {
+        width: 275px;
+        height: 275px;
     }
-
+ 
     .title-emoji {
         font-size: 1.4rem;
     }
@@ -146,8 +146,9 @@ button, select, input, textarea {
 
 .search-container {
     text-align: center;
-    margin-top: 30px;
+    margin-top: -50px;
     margin-bottom: 20px;
+    padding-top: 0px;
 }
 
 .search-btn {
@@ -238,7 +239,6 @@ button, select, input, textarea {
 
 .card-names-container p, .card-rds-container p, .card-date-container p, .card-result-container p {
     margin: 5px 0;
-    /* color: #fff; */
     text-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.5);
 }
 
@@ -269,13 +269,6 @@ button, select, input, textarea {
     body {
     background-color: white;
     color: #1a1a1a;
-  }
-
-  .app-title-container {
-    color: #111;
-    text-shadow:
-        0px 1px 1px rgba(0,0,0,0.35),
-        0px 2px 2px rgba(0,0,0,0.25);
   }
 
   h1 {
