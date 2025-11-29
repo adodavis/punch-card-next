@@ -116,19 +116,26 @@ export default function SignupPage() {
                     }}
                 />
 
-                <input
-                    type="password"
-                    placeholder="Password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
+                <div className="password-container">
+                     <input
+                        type="password"
+                        className="password-input"
+                        placeholder="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
 
-                {password && (
-                    <p style={{ color: strength.color }}>
-                        Strength: {strength.label}
-                    </p>
-                )}
+                    {password && (
+                        <span
+                            className="strength-label"
+                            style={{ color: strength.color }}>
+                            Strength: {strength.label} 
+                        </span>
+                    )}
+                </div>
+
+               
 
                 {error && <p style={{ color: "red",}}>{error}</p>}
 

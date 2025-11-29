@@ -3,3 +3,22 @@
     text-align: center;
     margin: 0 auto;
 }
+
+.password-container {
+  position: relative;
+  width: 100%;
+}
+
+.password-input {
+   width: 100%;
+}
+
+.strength-label {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    white-space: nowrap;
+    font-size: 14px;
+    pointer-events: none;
+}
