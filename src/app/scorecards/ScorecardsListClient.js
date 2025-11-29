@@ -39,7 +39,7 @@ export default function ScorecardsListClient ({ fights }) {
                     <div key={fight.id} className="scorecard-item">
                         <Link href={`/scorecard/${fight.id}`}>
                             <div className="card-names-container">
-                                <h2>{fight.fighterA} vs {fight.fighterB}</h2>
+                                <p>{fight.fighterA} vs {fight.fighterB}</p>
                                 {fight.isChampionship && (
                                     <div>
                                         <img src="/icons/championship-icon.png" alt="championship-icon" className="championship-icon" />
