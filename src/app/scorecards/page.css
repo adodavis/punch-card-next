@@ -40,36 +40,6 @@
     display: inline-block;
 }
 
-@media (max-width: 480px) {
-    .app-title-header {
-        width: 275px;
-        height: 275px;
-    }
- 
-    .title-emoji {
-        font-size: 1.4rem;
-    }
-
-    .logout-btn img {
-        width: 15px !important;
-        height: 15px !important;
-        margin-top: 7px;
-    }
-
-    .card-names-container {
-       font-size: 13px;
-    }
-
-    .card-rds-container, .card-date-container, .card-result-container {
-        font-size: 13px;
-    }
-
-    .championship-icon {
-        width: 10px;
-        height: 10px;
-    }
-}
-
 h1, h2 {
     font-family: 'Bebas Nue', sans-serif;
     letter-spacing: 1px;
@@ -219,7 +189,7 @@ button, select, input, textarea {
 .card-names-container p {
     white-space: nowrap;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 19px;
 }
 
 .championship-icon {
@@ -258,6 +228,36 @@ button, select, input, textarea {
 
 .delete-btn-container:hover button {
     font-size: 20px;
+}
+
+@media (max-width: 480px) {
+    .app-title-header {
+        width: 275px;
+        height: 275px;
+    }
+ 
+    .title-emoji {
+        font-size: 1.4rem;
+    }
+
+    .logout-btn img {
+        width: 15px !important;
+        height: 15px !important;
+        margin-top: 7px;
+    }
+
+    .card-names-container p {
+       font-size: 13px;
+    }
+
+    .card-rds-container, .card-date-container, .card-result-container {
+        font-size: 13px;
+    }
+
+    .championship-icon {
+        width: 10px;
+        height: 10px;
+    }
 }
 
 /* ====================================================================
