@@ -35,7 +35,7 @@ export default async function ScorecardsPage() {
         <div className="scorecards-list-page">
             <div className="scorecards-header">
                 <div className="app-title-header">
-                    <img src="/icons/title-header.png" alt="Punch Card Header" />
+                    <img src="/icons/title-header-logo.png" alt="Punch Card Header" />
                 </div>
                 
                 
