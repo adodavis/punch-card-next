@@ -11,7 +11,7 @@ export default async function ScorecardsPage() {
         return (
             <div style={{ padding: "2rem", textAlign: "center", placeItems: "center" }}>
                 <div className="app-title-header">
-                    <img src="/icons/title-header.png" alt="Punch Card Header" />
+                    <img src="/icons/title-header-logo.png" alt="Punch Card Header" />
                 </div>
                 
                 <h1>You must be logged in.</h1>
