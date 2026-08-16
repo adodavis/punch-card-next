@@ -11,7 +11,13 @@ export default function NewFightPage() {
     const [fighterA, setFighterA] = useState('');
     const [fighterB, setFighterB] = useState('');
     const [numRounds, setNumRounds] = useState('');
-    const [fightDate, setFightDate] = useState(new Date().toISOString().split('T')[0]);
+    const [ fightDate, setFightDate ] = useState(() => {
+        const d = new Date();
+        const year = d.getFullYear();
+        const month = String(d.getMonth() + 1).padStart(2, '0');
+        const day = String(d.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    });
     const [isChampionship, setIsChampionship] = useState(false);
     const [loading, setLoading] = useState(false);
 
