@@ -73,6 +73,7 @@ export default function NewFightPage() {
                 <select
                     value={numRounds}
                     onChange={(e) => setNumRounds(e.target.value)}
+                    required
                 >
                     <option value="">Number of Rounds</option>
                     <option value="4">4</option>

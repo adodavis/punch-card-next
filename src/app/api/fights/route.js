@@ -31,6 +31,15 @@ export async function POST(req) {
 
         const data = await req.json();
 
+        const validRoundCounts = [4, 6, 8, 10, 12, 15];
+
+        if (!validRoundCounts.includes(data.numRounds)) {
+            return Response.json(
+                { error: "Invalid number of rounds."},
+                { status: 400 }
+            );
+        }
+
             const newFight = await prisma.fight.create({
                 data: {
                     fighterA: data.fighterA,
